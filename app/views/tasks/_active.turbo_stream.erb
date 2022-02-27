@@ -1,0 +1,10 @@
+<%= turbo_stream.remove dom_id(task) %>
+<% if task.completed %>
+    <%= turbo_stream.prepend "done_list" do %>
+        <%= render partial: "tasks/task", locals: {task: task} %>
+    <% end %>
+<% else %>
+    <%= turbo_stream.prepend "todo_list" do %>
+        <%= render partial: "tasks/task", locals: {task: task} %>
+    <% end %>
+<% end %>

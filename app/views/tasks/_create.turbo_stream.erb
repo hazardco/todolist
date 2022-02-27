@@ -1,0 +1,3 @@
+<%= turbo_stream.prepend "todo_list" do %>
+  <%= render partial: "tasks/task", locals: {task: task} %>
+<% end %>

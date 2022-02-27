@@ -1,0 +1,4 @@
+<div id="<%= dom_id task %>" class="highlight">
+  <%= check_box_tag :completed, task.completed, task.completed, data: {id: task.id, controller: "check", action: "check#active"} %>
+  <%= task.name %>
+</div>
